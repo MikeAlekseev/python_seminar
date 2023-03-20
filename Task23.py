@@ -7,16 +7,16 @@
 
 import random
 
-nums = input("Введите количество целых яисел")
+nums = input("Введите количество целых чисел: ")
 
 array = [random.randint(-10, 10) for _ in range(int(nums))]
 counter = 0
-result_string = " "
+result_string = ""
 print(array)
 
 for i in range(len(array) - 1):
     if(array[i] < array[i + 1]):
         counter += 1
-        result_string += f'{array[i]} < {array[i + 1]}'
-        
-print(f'{counter} ({result_string})')
+        result_string += f'{array[i]} < {array[i + 1]} '
+
+print(f'количество пар чисел = {counter} -> ({result_string})')
